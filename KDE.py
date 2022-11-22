@@ -52,7 +52,7 @@ def CreateCompareKDEPlots():
     plt.vlines(project1["Average Logistic"].mean(), 0, 2.5, color='black', linestyles='-')
     plt.vlines(project4["Average Logistic"].mean(), 0, 2.5, color='black', linestyles='--')
     ax.legend()
-    plt.savefig('KDECompareCurve.eps')
+    plt.savefig('KDECompareCurve.pdf')
 
 def ProjectKDEPlot(data, filename, h=2.5, marginal = False):
     if marginal:
@@ -84,12 +84,12 @@ def ProjectKDEPlot(data, filename, h=2.5, marginal = False):
 
 def main():
 #    CreateCompareKDEPlots()
-    ProjectKDEPlot(pd.read_csv("StudentsProject1.csv"),'KDEProject1Curve.eps',2.5)
-    ProjectKDEPlot(pd.read_csv("StudentsProject1.csv"),'KDEChangeProject1Curve.eps',5, True)
-    ProjectKDEPlot(pd.read_csv("StudentsFallProject1.csv"),'KDEFallProject1Curve.eps',3)
-    ProjectKDEPlot(pd.read_csv("StudentsFallProject1.csv"),'KDEFallChangeProject1Curve.eps', 6, True)
-    ProjectKDEPlot(pd.read_csv("StudentsSpringProject1.csv"),'KDESpringProject1Curve.eps',2.5)
-    ProjectKDEPlot(pd.read_csv("StudentsSpringProject1.csv"),'KDESpringChangeProject1Curve.eps',4.25, True)
+    ProjectKDEPlot(pd.read_csv("StudentsProject1.csv"),'KDEProject1Curve.pdf',2.5)
+    ProjectKDEPlot(pd.read_csv("StudentsProject1.csv"),'KDEChangeProject1Curve.pdf',5, True)
+    ProjectKDEPlot(pd.read_csv("StudentsFallProject1.csv"),'KDEFallProject1Curve.pdf',3)
+    ProjectKDEPlot(pd.read_csv("StudentsFallProject1.csv"),'KDEFallChangeProject1Curve.pdf', 6, True)
+    ProjectKDEPlot(pd.read_csv("StudentsSpringProject1.csv"),'KDESpringProject1Curve.pdf',2.5)
+    ProjectKDEPlot(pd.read_csv("StudentsSpringProject1.csv"),'KDESpringChangeProject1Curve.pdf',4.25, True)
 
 
 

@@ -49,7 +49,7 @@ def CreateCompareKDEPlots():
     plt.vlines(project1["Average Marginal Logistic"].mean(), 0, 3, color='black', linestyles='-')
     plt.vlines(project4["Average Marginal Logistic"].mean(), 0, 3, color='black', linestyles='--')
     ax.legend()
-    plt.savefig('KDEChangeCompareCurve.eps')
+    plt.savefig('KDEChangeCompareCurve.pdf')
 
 def ProjectKDEPlot():
     data = pd.read_csv("StudentsProject1.csv")
@@ -70,7 +70,7 @@ def ProjectKDEPlot():
         ax.plot(xinterval, yprojections, label=labels[index], color='black', linestyle=linetypes[index])
     plt.vlines(subdata.mean(), 0, 4.5, color='black', linestyles='-')
     # ax.legend()
-    plt.savefig('KDEChangeProject1Curve.eps')
+    plt.savefig('KDEChangeProject1Curve.pdf')
 
 
 def main():
