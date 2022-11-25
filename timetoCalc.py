@@ -6,7 +6,19 @@ import numpy as np
 def main():
     df = pd.read_csv('Project1DataFallOnly.csv')
     df2 = pd.read_csv('Project1DataSpringOnly.csv')
-    combined = pd.concat([df,df2], ignore_index=True)    
+    combined = pd.concat([df,df2], ignore_index=True)
+    
+    # Warm up so that njit doesn't have to compile for the first run  
+    ids = combined['student'].unique().flatten().tolist()
+    randomGroupIds = np.random.choice(ids, size=3, replace=False)
+    s = []
+    for _, i in enumerate(randomGroupIds):
+        rows = combined[combined['student']==i]
+        s.append(rows)
+    resultData = pd.concat(s, ignore_index=True)
+    pa.DisplayResults(resultData)
+ 
+    # Start real run timing ProjectAssessment
     numStudents = [3, 5, 10, 25, 50, 75, 100]
     l = []
     for num in numStudents:
