@@ -19,7 +19,7 @@ def main():
     pa.DisplayResults(resultData)
  
     # Start real run timing ProjectAssessment
-    numStudents = [3, 5, 10, 15, 20, 25, 35, 45, 55, 65, 75, 85, 100, 115, 130, 150]
+    numStudents = [3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100, 110, 120, 130, 140, 150]
     l = []
     for num in numStudents:
         ids = combined['student'].unique().flatten().tolist()
