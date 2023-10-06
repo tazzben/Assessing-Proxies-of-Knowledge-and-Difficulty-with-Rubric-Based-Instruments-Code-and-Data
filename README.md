@@ -1,6 +1,6 @@
 ## README
 
-The files in this directory were used to perform the analysis in the paper "Assessing Proxies of Knowledge and Difficulty with Rubric-Based Instruments."  The SSRN version of the paper is available at: https://dx.doi.org/10.2139/ssrn.4194935. The paper is forthcoming in the Southern Economic Journal.
+The files in this directory were used to perform the analysis in the paper "[Assessing Proxies of Knowledge and Difficulty with Rubric-Based Instruments](https://doi.org/10.1002/soej.12658)."
 
 The files are as follows:
 
